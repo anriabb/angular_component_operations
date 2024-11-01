@@ -1,0 +1,44 @@
+<!-- Interpolation-->
+<p>first-comp works!  {{title}}</p>
+
+<!-- Property Binding-->
+<button [disabled]="isDisabled">isDisabled</button>
+<img [src]="imageURL">
+
+<!--Attribute Binding-->
+<table> 
+    <tr>
+        <td [attr.colspan] = "colspanValue"></td> 
+    </tr>
+</table>
+
+<button [attr.aria-label] = "ariaText">Submit</button>
+
+<!--Class and Style binding-->
+<div [class.Active]= "{'active': isActive}">is active?</div>
+<div [ngClass] = "{ 'active': isActive, 'special': isSpecial }">Styled Content</div>
+<div [class.greet] = "{'gree': greeting}">Hi</div>
+
+<!--Event Binding-->
+<button (click)="onClick()">Click</button>
+<p>{{clickMessage}}</p>
+
+<!--Two-Way Bindnig-->
+<input [(ngModel)]="twoWayBindingName" type="text">
+<p>your name: {{twoWayBindingName}}</p>
+
+<!--Directives-->
+<div *ngIf = "isTrue">it's ture</div>
+
+<ul>
+    <li *ngFor="let item of stringArray">{{item}}</li>
+</ul>
+
+<!--Template Reference Variable-->
+<input #inputedValue>
+<button (click)="onSubmit(inputedValue.value)">subMit</button>
+<p>{{tempVarValue}}</p>
+
+
+
+
